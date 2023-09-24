@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 const consoled = require("consoled.js")
 const connection = mysql.createConnection({
-  host: 'db4free.net',
-  user: 'iskender83',
-  password: 'iskender83',
-  database: 'iskender83u'
+  host: '',
+  user: '',
+  password: '',
+  database: ''
 });
 
 connection.connect(err => {
