@@ -5,6 +5,6 @@
   "ratelimit": 0.5,
   "logFile": "./log.txt",
   "admins": [
-    "d3GzxyZd"
+    "your-guilded-id"
   ]
 }
