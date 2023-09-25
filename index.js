@@ -2,8 +2,6 @@ require("dotenv").config()
 
 const { Client, Collection } = require("guilded.js")
 const { PermaDB } = require("@rednexie/perma.db")
-const { CacheDB } = require("@rednexie/cache.db")
-
 
 const path = require("path")
 const fs = require("fs")
@@ -12,7 +10,7 @@ const os = require("os")
 
 const consoled = require("consoled.js")
 
-const cache = require("@rednexie/cache.db")
+const cache = require("./modules/cache")
 const db = new PermaDB('perma.db', { minimize: true, memory: false, });
 
 const log = require("./modules/log")

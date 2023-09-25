@@ -1,7 +1,7 @@
 const { prefix } = require("../../config.json")
 const { PermaDB } = require("@rednexie/perma.db")
 const db = new PermaDB('perma.db', { minimize: true, memory: false, });
-const cache = require("@rednexie/cache.db")
+const cache = require("../../modules/cache")
 const { admins } = require("../../config.json")
 
 module.exports = {

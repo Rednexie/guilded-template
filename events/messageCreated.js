@@ -7,7 +7,7 @@ const prefix = process.env.PREFIX
 
 const { ratelimit } = require("../config.json")
 
-const cache = require("@rednexie/cache.db")
+const cache = require("../modules/cache")
 
 module.exports = {
   config: {
