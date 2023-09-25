@@ -6,7 +6,7 @@
     "perma.db": "^1.0.5"
   },
   "name": "guilded-template",
-  "description": "Features:\r - Rate Limiting\r - Admin System\r - User Ban/Unban\r - Command Aliases\r # Dependencies\r - guilded.js\r - perma.db\r - dotenv\r - consoled.js",
+  "description": "bot template for guilded.js",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
