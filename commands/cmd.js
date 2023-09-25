@@ -5,6 +5,6 @@ module.exports = {
       usage: "cmd"
     },
     run: async (client, message, args) => {
-      
+      // if(!admins.includes(message.createdById)) return message.reply("only for admins")
     }
   }
