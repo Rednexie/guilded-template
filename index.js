@@ -1,5 +1,5 @@
 require("dotenv").config()
-const { Client, Collection, GatewayIntentBits, Intents, DiscordAPIError } = require("discord.js")
+const { Client, Collection } = require("guilded.js")
 const { PermaDB } = require("perma.db")
 
 const path = require("path")
@@ -8,12 +8,15 @@ const os = require("os")
 
 
 const consoled = require("consoled.js")
-
+const config = require("./config.json")
 const cache = require("./modules/cache")
 const db = new PermaDB('perma.db', { minimize: true, memory: false, });
 
 const log = require("./modules/log")
 
+consoled.bright.white("--------------------------------------------")
+consoled.bright.white("https://github.com/Rednexie/guilded-template")
+consoled.bright.white("--------------------------------------------")
 
 let banned;
 banned = db.getSync("banned");
@@ -25,11 +28,17 @@ banned.forEach(ban => {
 
 
 const client = new Client({
-    intents: [
-      GatewayIntentBits.Guilds,
-      GatewayIntentBits.GuildMessages,
-      GatewayIntentBits.MessageContent,
-    ],
+  token: process.env.TOKEN,
+  prefix: config.prefix,
+  intents: ["GUILDS", "MESSAGES"],
+  cache: {
+    channels: true,
+    messages: true,
+    users: true,
+    roles: true,
+    teams: true,
+    members: true,
+  },
   });
 
 client.login(process.env.TOKEN)

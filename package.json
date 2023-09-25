@@ -1,8 +1,36 @@
 {
   "dependencies": {
     "consoled.js": "^1.0.4",
-    "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
+    "guilded.js": "^0.23.5",
     "perma.db": "^1.0.5"
-  }
+  },
+  "name": "guilded-template",
+  "description": "Features:\r - Rate Limiting\r - Admin System\r - User Ban/Unban\r - Command Aliases\r # Dependencies\r - guilded.js\r - perma.db\r - dotenv\r - consoled.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rednexie/guilded-template.git"
+  },
+  "keywords": [
+    "guilded",
+    "bot",
+    "guilded.gg",
+    "discord",
+    "bot",
+    "commands",
+    "template",
+    "nodejs",
+    "server"
+  ],
+  "author": "Rednexie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rednexie/guilded-template/issues"
+  },
+  "homepage": "https://github.com/Rednexie/guilded-template#readme"
 }

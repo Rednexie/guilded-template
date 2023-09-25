@@ -15,7 +15,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
 
-      if(!admins.includes(message.author.id)) return message.reply("only for admins")
+      if(!admins.includes(message.createdById)) return message.reply("only for admins")
       const id = args[0]
       if(typeof id != "string" || id.trim() == "") return message.reply(`${prefix}admin <id>`)
       fs.readFile(path.join(__dirname, "../../config.json"), "utf8", (err, data) => {

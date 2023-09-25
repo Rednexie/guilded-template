@@ -11,7 +11,7 @@ module.exports = {
       usage: "unban"
     },
     run: async (client, message, args) => {
-      if(!admins.includes(message.author.id)) return message.reply("only for admins")
+      if(!admins.includes(message.createdById)) return message.reply("only for admins")
       const id = args[0]
       if(typeof id != "string" || id.trim() == "") return message.reply(`${prefix}unban <id>`)
       cache.remove(`ban@${id.trim()}`)
