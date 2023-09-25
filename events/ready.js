@@ -13,7 +13,7 @@ module.exports = {
   },
   execute: async (client) => {
     const servers = await client.fetchServers()
-    consoled.cyan(`${client.user.name} is online on ${servers?.size || servers?.length} servers with a ping of ${client.ws.ping}`)
+    consoled.cyan(`${client.user.name} is online on ${servers?.size || servers?.length} server/s with a ping of ${client.ws.ping}`)
     client.setStatus({
         content: presence,
         emoteId: "2060637" // download an emoji from emoji.gg > Server Settings > Emotes > Upload Emote > Go to a channel > Emoji icon > Right Click to your emoji > Copy emote ID

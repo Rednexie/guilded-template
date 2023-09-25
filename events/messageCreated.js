@@ -17,16 +17,15 @@ module.exports = {
 
 
   execute: async (message, client) => {
-    if(message.isPrivate) return
-    
+    if(message.isPrivate) return message.reply("https://github.com/Rednexie/guilded-template")
     if(message.createdById == client.user.id) return;
-
-    if(cache.has(`ban@${message.createdById}`)) return
+    if(message.author?.type === 0) return;
+    if(cache.has(`ban@${message.createdById}`)) return;
     // console.log(message)
     //Check if author is a client or the message was sent in dms and return
     // if(message.author.type === 0) return;
-    
-    
+
+
     //get prefix from config and prepare message so it can be read as a command
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
@@ -56,8 +55,8 @@ module.exports = {
       }
       return
     }
-    
-    
+
+
     try {
       await commands.run(client, message, args);
     } catch (error) {

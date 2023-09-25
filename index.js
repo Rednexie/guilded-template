@@ -10,6 +10,7 @@ const os = require("os")
 const consoled = require("consoled.js")
 const config = require("./config.json")
 const cache = require("./modules/cache")
+
 const db = new PermaDB('perma.db', { minimize: true, memory: false, });
 
 const log = require("./modules/log")
@@ -79,8 +80,8 @@ for(folder of commandSubFolders){
     }
 }
 
-consoled.green(`${slashCommandFiles.length} slash commands loaded.`)
-consoled.green(`${commandFiles.length} bot commands loaded.`)
-consoled.green(`${commandSubFolders.length} command subfolders readed.`)
+consoled.green(`${slashCommandFiles.length} slash command/s loaded.`)
+consoled.green(`${commandFiles.length} bot command/s loaded.`)
+consoled.green(`${commandSubFolders.length} command subfolder/s readed.`)
 consoled.green(`${eventFiles.length} event listeners loaded.`)
 consoled.blue("perma.db is only using: " + (fs.statSync("perma.db").size / 1024).toFixed(2) + "kb of the storage")
