@@ -1,5 +1,5 @@
 const { prefix } = require("../../config.json")
-const { PermaDB } = require("@rednexie/perma.db")
+const { PermaDB } = require("perma.db")
 const db = new PermaDB('perma.db', { minimize: true, memory: false, });
 const cache = require("../../modules/cache")
 const { admins } = require("../../config.json")
@@ -11,7 +11,7 @@ module.exports = {
       usage: "unban"
     },
     run: async (client, message, args) => {
-      if(!admins.includes(message.createdById)) return message.reply("only for admins")
+      if(!admins.includes(message.author.id)) return message.reply("only for admins")
       const id = args[0]
       if(typeof id != "string" || id.trim() == "") return message.reply(`${prefix}unban <id>`)
       cache.remove(`ban@${id.trim()}`)

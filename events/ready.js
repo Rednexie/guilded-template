@@ -12,12 +12,7 @@ module.exports = {
     once: true,
   },
   execute: async (client) => {
-
-    const servers = await client.fetchServers()
-    consoled.cyan("guilded.gg bot is ready!")
-    client.setStatus({
-        content: "guilded.gg rednexie",
-        emoteId: "2060637"
-    })
+    consoled.cyan(`${client.user.username} is online on ${client.guilds.cache.size} servers with a ping of ${client.ws.ping + "ms"}!`)
+    client.user.setPresence({ activities: [{ name: presence }] });
   }
 }

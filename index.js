@@ -1,7 +1,6 @@
 require("dotenv").config()
-
-const { Client, Collection } = require("guilded.js")
-const { PermaDB } = require("@rednexie/perma.db")
+const { Client, Collection, GatewayIntentBits, Intents, DiscordAPIError } = require("discord.js")
+const { PermaDB } = require("perma.db")
 
 const path = require("path")
 const fs = require("fs")
@@ -26,22 +25,12 @@ banned.forEach(ban => {
 
 
 const client = new Client({
-  // Your bot user's token
-  token: process.env.TOKEN,
-  // Your bot user's command prefix
-  prefix: "!",
-  // Your bot user's intents
-  intents: ["GUILDS", "MESSAGES"],
-  // Your bot user's cache options
-  cache: {
-    channels: true,
-    messages: true,
-    users: true,
-    roles: true,
-    teams: true,
-    members: true,
-  },
-});
+    intents: [
+      GatewayIntentBits.Guilds,
+      GatewayIntentBits.GuildMessages,
+      GatewayIntentBits.MessageContent,
+    ],
+  });
 
 client.login(process.env.TOKEN)
 
