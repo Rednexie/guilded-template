@@ -6,7 +6,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
       if(!admins.includes(message.createdById)) return message.reply("only for admins")
-      consoled.red(`Logged out: ${message.createdById}`)
+      consoled.red(`Exited: ${message.createdById}`)
       return process.exit(0)
     }
   }
