@@ -1,7 +1,7 @@
 {
   "alias": true,
   "prefix": "!",
-  "presence": "github.com/rednexie",
+  "presence": "guilded template",
   "ratelimit": 2.5,
   "logFile": "./log.txt",
   "admins": [
