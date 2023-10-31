@@ -24,7 +24,7 @@ You can setup the bot by following the instructions for your preferred platform 
 [Download as Zip](https://github.com/Rednexie/guilded-template/archive/refs/heads/main.zip)
 
 
-[Clone with git](https://gist.github.com/Rednexie/92a63c3b87fc8c35df99b84303d32ee0))
+[Clone with git](https://gist.github.com/Rednexie/92a63c3b87fc8c35df99b84303d32ee0)
 
 
 [Run on Replit](https://repl.it/github/Rednexie/guilded-template)
