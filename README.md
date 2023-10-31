@@ -14,3 +14,6 @@ Features:
 
 
 [Run on Replit](https://repl.it/github/Rednexie/guilded-template)
+
+
+[Import with Glitch] (https://glitch.com/edit/#!/import/git?url=https://github.com/Rednexie/guilded-template)
