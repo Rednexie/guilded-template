@@ -9,6 +9,7 @@ Features:
 - perma.db
 - dotenv
 - consoled.js
+---
 # Links
 [Download as Zip](https://github.com/Rednexie/guilded-template/archive/refs/heads/main.zip)
 
@@ -17,3 +18,6 @@ Features:
 
 
 [Import with Glitch](https://glitch.com/edit/#!/import/git?url=https://github.com/Rednexie/guilded-template)
+
+
+[Create Github Codespace](https://github.com/codespaces/new?quickstart=1&name=discordtemplate&repo=Rednexie/discord-template)
