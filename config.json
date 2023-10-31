@@ -1,4 +1,5 @@
 {
+  "token": "Server>Manage Bots>Create Bot>API>Generate Token",
   "alias": true,
   "prefix": "!",
   "presence": "guilded template",
