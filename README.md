@@ -20,4 +20,4 @@ Features:
 [Import with Glitch](https://glitch.com/edit/#!/import/git?url=https://github.com/Rednexie/guilded-template)
 
 
-[Create Github Codespace](https://github.com/codespaces/new?quickstart=1&name=discordtemplate&repo=Rednexie/discord-template)
+[Create Github Codespace](https://github.com/codespaces/new?quickstart=1&name=guildedtemplate&repo=Rednexie/guilded-template)
