@@ -50,7 +50,7 @@ node .
 # Cloud hosting platforms (such as Replit, Glitch and Codespaces):
 # (Recommended for low-ping and always on)
 - Platforms like github codespaces, replit, glitch etc. are cloud hosting platforms.
-- Create a project, and choose nodejs.
+- Create a project, and choose nodejs as the language (or template).
 - Import the repository on the platform
    - You can click the links i provided to import the repo on glitch, codespaces or replit.
    - Or find the github repository import section, and paste the [link](https://github.com/Rednexie/guilded-template) of the repository.
