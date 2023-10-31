@@ -50,11 +50,10 @@ node .
 # Cloud hosting platforms (such as Replit, Glitch and Codespaces):
 # (Recommended for low-ping and always on)
 - Platforms like github codespaces, replit, glitch etc. are cloud hosting platforms.
-- Create a project, and choose nodejs as the language (or template).
 - Import the repository on the platform
    - You can click the links i provided to import the repo on glitch, codespaces or replit.
    - Or find the github repository import section, and paste the [link](https://github.com/Rednexie/guilded-template) of the repository.
-- When the importing process is done, open a terminal
+- When the importing process is done, open a terminal.
 - Install the required dependencies by typing: `npm i`
 - Use the platform's integrated secrets feature, or paste your guilded bot token into *config.json*.
 - Wait for the bot to log in, after a second or so it should be successfully running.
