@@ -84,8 +84,7 @@ for(folder of commandSubFolders){
     }
 }
 
-consoled.green(`${slashCommandFiles.length} slash command/s loaded.`)
-consoled.green(`${commandFiles.length} bot command/s loaded.`)
-consoled.green(`${commandSubFolders.length} command subfolder/s readed.`)
-consoled.green(`${eventFiles.length} event listeners loaded.`)
-consoled.blue("perma.db is only using: " + (fs.statSync("perma.db").size / 1024).toFixed(2) + "kb of the storage")
+consoled.green(`${slashCommandFiles.length} slash ${slashCommandFiles.length > 1 ? "commands" : "command"} loaded.`)
+consoled.green(`${commandFiles.length} bot ${commandFiles.length > 1 ? "commands" : "command"} loaded.`)
+consoled.green(`${commandSubFolders.length} command ${commandSubFolders.length > 1 ? "subfolders" : "subfolder"} readed.`)
+consoled.green(`${eventFiles.length} event ${eventFiles.length > 1 ? "listeners" : "listener"} activated.`)
