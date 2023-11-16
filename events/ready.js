@@ -4,7 +4,7 @@ const os = require("os")
 
 const consoled = require("consoled.js")
 
-const { presence } = require("../config.json")
+const { presence, emote } = require("../config.json")
 
 module.exports = {
   config: {
@@ -16,7 +16,7 @@ module.exports = {
     consoled.cyan(`${client.user.name} is online on ${servers?.size || servers?.length} server/s with a ping of ${client.ws.ping}`)
     client.setStatus({
         content: presence,
-        emoteId: "2060637" // download an emoji from emoji.gg > Server Settings > Emotes > Upload Emote > Go to a channel > Emoji icon > Right Click to your emoji > Copy emote ID
+        emoteId: emote // download an emoji from emoji.gg > Server Settings > Emotes > Upload Emote > Go to a channel > Emoji icon > Right Click to your emoji > Copy emote ID
     })
   }
 }
