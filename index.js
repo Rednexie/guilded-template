@@ -41,9 +41,12 @@ const client = new Client({
     members: true,
   },
   });
-
-client.login(process.env.TOKEN)
-    .catch(err => consoled.bright.red("client login error, please check your token.") && process.exit(1))
+try{
+    client.login(process.env.TOKEN)
+}
+catch(error){
+    consoled.bright.red("client login error, please check your token and client.") && process.exit(1)
+}
 
 client.commands = new Collection();
 client.slashes = new Collection()
