@@ -2,6 +2,7 @@
   "token": "Server>Manage Bots>Create Bot>API>Generate Token",
   "alias": true,
   "prefix": "!",
+  "emote": "",
   "presence": "guilded template",
   "ratelimit": 2.5,
   "logFile": "./log.txt",
