@@ -34,3 +34,6 @@ You can setup the bot by following the instructions for your preferred platform 
 
 
 [Create Github Codespace](https://github.com/codespaces/new?quickstart=1&name=guildedtemplate&repo=Rednexie/guilded-template)
+
+
+[Import into CodeSandbox](https://codesandbox.io/p/github/Rednexie/guilded-template)
