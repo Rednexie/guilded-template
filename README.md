@@ -37,3 +37,11 @@ You can setup the bot by following the instructions for your preferred platform 
 
 
 [Import into CodeSandbox](https://codesandbox.io/p/github/Rednexie/guilded-template)
+
+
+
+### Notes
+
+- Thanks for using guilded-template.
+- Please don't forget to star the repository if you liked it!
+- For `guilded.py` users, I recommend using [Guilded-Bot-Template](https://github.com/YumYummity/Guilded-Bot-Template) 
