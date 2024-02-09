@@ -7,6 +7,7 @@ const fs = require("fs")
 const os = require("os")
 
 
+
 const consoled = require("consoled.js")
 const config = require("./config.json")
 const cache = require("./modules/cache")
@@ -26,10 +27,11 @@ banned.forEach(ban => {
     cache.set(`ban@${ban}`, true)
 })
 
+const token = process.env.TOKEN || config.token
 
 
 const client = new Client({
-  token: process.env.TOKEN,
+  token,
   prefix: config.prefix,
   intents: ["GUILDS", "MESSAGES"],
   cache: {
@@ -42,7 +44,7 @@ const client = new Client({
   },
   });
 try{
-    client.login(process.env.TOKEN)
+    client.login(token)
 }
 catch(error){
     consoled.bright.red("client login error, please check your token and client.") && process.exit(1)
@@ -58,11 +60,7 @@ for(command of commandFiles){
     const cmd = require(`./commands/${command}`);
     if(cmd && cmd.config?.name) client.commands.set(cmd.config.name, cmd);
 }
-const slashCommandFiles = fs.readdirSync("./slashes/").filter(file => file.endsWith(".js"))
-for(slashCommand of slashCommandFiles){
-    const cmd = require(`./slashes/${slashCommand}`);
-    client.slashes.set(cmd.config.name, cmd)
-}
+
 const eventFiles = fs.readdirSync("./events/").filter(file => file.endsWith(".js"))
 for(event of eventFiles){
     const ev = require(`./events/${event}`);
@@ -84,7 +82,7 @@ for(folder of commandSubFolders){
     }
 }
 
-consoled.green(`${slashCommandFiles.length} slash ${slashCommandFiles.length > 1 ? "commands" : "command"} loaded.`)
+
 consoled.green(`${commandFiles.length} bot ${commandFiles.length > 1 ? "commands" : "command"} loaded.`)
 consoled.green(`${commandSubFolders.length} command ${commandSubFolders.length > 1 ? "subfolders" : "subfolder"} readed.`)
 consoled.green(`${eventFiles.length} event ${eventFiles.length > 1 ? "listeners" : "listener"} activated.`)
